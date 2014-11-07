@@ -1,4 +1,4 @@
-These two files contain the bulk of the logic of the whole package. 
+These two files contain the bulk of the logic of the whole package. Peripheral files can be found in the directories above.
 
 The controls node implements PID controllers on 5 DOF of the vehicle, computing the net force and torque that should be applied in order to close the gap between the desired setpoint and the estimated state. Closed loop position control and open loop speed control are implemented.
 
