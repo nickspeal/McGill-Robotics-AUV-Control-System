@@ -1,0 +1,19 @@
+<launch>
+	<!-- launches controls node with appropriate parameters. Assumes Simulator with Roscore is already running. -->	
+
+    <!-- Parameters needed for controls to work at all!!! -->
+      <rosparam command="load" file="$(find controls)/controlsParameters.yaml"/> 
+      <rosparam command="load" file="$(find controls)/sim_gains.yaml"/>
+
+  <!-- Controls node -->
+	 <node name="controls" pkg="controls" type="controls"  respawn="false" output="screen"/>
+	 <node name="thrust_mapper" pkg="controls" type="thrust_mapper" respawn="false" output="screen"/> <!-- not needed in simulator, but might as well run it to make sure there are no runtime errors or to debug etc -->
+
+
+  <!-- Fake replacement of computer vision - not sure if it still works May 19, so the node is not launched by default. An argument is needed to launch it. -->
+	  <arg name="useDC" default="0"/>
+	  <group if="$(arg useDC)">
+	    <node name="distanceCalculator" pkg="computer_vision" type="distanceCalculator"  respawn="false" output="screen"/>
+	  </group>
+
+  </launch>

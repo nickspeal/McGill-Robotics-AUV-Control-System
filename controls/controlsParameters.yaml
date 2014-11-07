@@ -1,0 +1,37 @@
+#gains were moved to another file (separate for gains.yaml and sim_gains.yaml)
+#Some saturation parameters are unused - the functionality was built, but left out because variables didn't need to be saturated at every step along the way.
+
+max_error_x_p: 10
+max_error_y_p: 10
+max_error_z_p: 2 #unused july 11
+max_error_pitch_p: 1.5  #unused july 11
+max_error_yaw_p: 1 #radians
+
+max_error_x_d: 1
+max_error_y_d: 0.5 #unused july 11
+max_error_z_d: 1 #unused july 11
+max_error_pitch_d: 0.5  #unused july 11
+max_error_yaw_d: 0.5 #unused july 11
+
+XSpeed/max: 30
+YSpeed/max: 30
+
+coefs/mass: 30
+coefs/buoyancy: 0.02
+coefs/drag: 0.1
+coefs/gravity: 9.81
+coefs/dt: 0.5
+
+
+#thrust_mapper parameters
+voltage/min: -20 
+voltage/max: 20
+motorCommands/min: -500
+motorCommands/max: 500
+force/max: 100    #way too high because thrusts are saturated downstream
+torque/max: 100   #way too high too
+
+max_thrust: 10
+
+Yaw/max: 3.14159 # pi # maximum setpoint 
+Pitch/max: 0.7853 # pi/4

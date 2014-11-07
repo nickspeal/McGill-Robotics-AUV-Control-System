@@ -1,0 +1,9 @@
+<launch>
+    <!-- Parameters needed for controls to work at all!!! -->
+    	<rosparam command="load" file="$(find controls)/controlsParameters.yaml"/>   
+  		<rosparam command="load" file="$(find controls)/gains.yaml"/>
+
+  	<!-- Launch both nodes -->
+		 <node name="controls" pkg="controls" type="controls"  respawn="false" output="screen"/>
+		 <node name="thrust_mapper" pkg="controls" type="thrust_mapper" respawn="false" output="screen"/>
+</launch>

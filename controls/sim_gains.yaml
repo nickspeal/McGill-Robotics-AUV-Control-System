@@ -1,0 +1,29 @@
+gains/kp: 0 # not sure if these 3 general gains are ever used....
+gains/ki: 0
+gains/kd: 0
+
+gains/kp_xPos: 0.5
+gains/ki_xPos: 0
+gains/kd_xPos: 15
+
+gains/kp_yPos: 1.5
+gains/ki_yPos: 0
+gains/kd_yPos: 15
+
+gains/kp_Depth: 4
+gains/ki_Depth: 0
+gains/kd_Depth: 20
+
+gains/kp_Pitch: .2
+gains/ki_Pitch: 0
+gains/kd_Pitch: 1
+
+gains/kp_Yaw: 0.2 #.02
+gains/ki_Yaw: 0
+gains/kd_Yaw: 1 #.1
+
+gains/OL_coef_x: 5
+gains/OL_coef_y: 5
+gains/OL_coef_yaw: 1
+gains/OL_coef_depth: 1
+gains/OL_coef_balance: 0 #no balance needed in simulator

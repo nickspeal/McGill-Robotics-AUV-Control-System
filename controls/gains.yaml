@@ -1,0 +1,32 @@
+gains/kp: 0 # not sure if these 3 are used...
+gains/ki: 0
+gains/kd: 0
+
+gains/kp_xPos: 1.5
+gains/ki_xPos: 0
+gains/kd_xPos: 0
+
+gains/kp_yPos: 1.5
+gains/ki_yPos: 0
+gains/kd_yPos: 0
+
+gains/kp_Depth: 20
+gains/ki_Depth: 0.5
+gains/kd_Depth: 0
+
+gains/kp_Pitch: 10
+gains/ki_Pitch: 0.1
+gains/kd_Pitch: 0
+
+gains/kp_Yaw: 5
+gains/ki_Yaw: 0.025
+gains/kd_Yaw: 0.5
+
+gains/OL_coef_x: 5
+gains/OL_coef_y: 5
+gains/OL_coef_yaw: 1
+gains/OL_coef_depth: 1
+gains/OL_coef_balance: 0
+
+z_steady_force: 3 #open loop buoyancy offset # was 4.2 at one point
+pitch_steady_torque: 0 #open loop balance/buoyancy offset # was -0.4 at one point (likely before the integral controller was added)
